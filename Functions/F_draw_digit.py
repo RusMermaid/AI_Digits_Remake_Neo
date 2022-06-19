@@ -1,5 +1,8 @@
 from PIL import Image  as IMG
 from functools import reduce
+from Functions import F_colour_interpol
+
+
 def img_add_h(img1, img2=None):
 	if img2 is None:
 		return img1
@@ -25,6 +28,6 @@ def img_add_list_2d(img_2d_list):  # Соединение изображений
 
 
 def draw_digit(array_2d_digit):
-    return img_add_list_2d([[IMG.new("RGB",(1, 1),(int(10*j), int(10*j), int(10*j))) for j in i] for i in array_2d_digit])
+    return img_add_list_2d([[IMG.new("RGB",(1, 1), F_colour_interpol.grey(j)) for j in i] for i in array_2d_digit])
 
 

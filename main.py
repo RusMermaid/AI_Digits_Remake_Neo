@@ -6,9 +6,12 @@ from PIL import Image
 
 from Functions.F_draw_digit import draw_digit
 
-number_dataset = sklearn.datasets.load_digits()
+digits = sklearn.datasets.load_digits()
 
 
-print(number_dataset.images[0])
+print(digits.images[0])
+
+digit = draw_digit(digits.images[0])
+digit.save('digit-test.png')
 
 
