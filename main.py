@@ -11,6 +11,4 @@ number_dataset = sklearn.datasets.load_digits()
 
 print(number_dataset.images[0])
 
-print(draw_digit(number_dataset.images[0]))
-
 
